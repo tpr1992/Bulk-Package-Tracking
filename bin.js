@@ -1,0 +1,2 @@
+const runApp = require('.')
+runApp;
