@@ -112,14 +112,12 @@ const handleResponse = (data, outputName, totalLength, respObj, filtered) => {
         let allInfoArr = [...respArr, ...customerInfo]
         var newLine= "\r\n";
         let fieldNames = 'Test';
-        data = [
-          JSON.stringify(allInfoArr.flat())
-        ];
-        writeFile(outputName, data[0], newLine, totalLength);
+        allInfoArr = allInfoArr.flat();
+        writeFile(outputName, allInfoArr, newLine, totalLength);
       }
     }
   } else {
-    // console.log(err);
+    console.log(err);
   }
 }
 
